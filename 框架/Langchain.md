@@ -1,8 +1,4 @@
-[TOC]
-
 # LangChain相关地址
-
-------
 
 - **官网**：https://www.langchain.com/
 - **GitHub 地址**：https://github.com/langchain-ai
@@ -12,17 +8,9 @@
 
 
 
-
-
 # 为什么需要LangChain
 
-------
-
 ## 单一的大模型的局限性
-
-------
-
-
 
 - 知识受限于旧数据
 - 无法和外部系统交互（API 数据库等）
@@ -32,13 +20,44 @@
 
 ## LangChain的定位
 
-------
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788670777.png)
 
-![img](./Langchain/1788403717863-36d6355e-3e69-4ffc-a52c-367854c12561.png)
+## LangChain的应用场景
 
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788403913297-dc94d44c-cac8-456a-837d-cba2cc037b8e.png)
 
+## LangChain主要模块（V1.2）
 
-安装相关依赖：
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788670778.png)
+
+## LangChain家族
+
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788403995268-8bad8537-802a-4f0f-8f6a-897ef4dbee85.png)
+
+## python虚拟环境配置
+
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788404039301-e954ba70-ad33-4ef2-8439-61dc07c71834.png)
+
+## macbook配置conda
+
+<font color="orange">环境初始化：</font>
+
+```bash
+## 下载conda
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh\nbash Miniconda3-latest-MacOSX-arm64.sh
+conda env list
+## 安装隔离环境
+cnoda create --name langchain1.2 python=3.13.12
+## 初始化环境 
+conda init
+conda env list
+## 切换到对应的隔离环境
+conda activate langchain1.2
+## 验证环境
+python --version
+```
+
+<font color="orange">安装相关依赖：</font>
 
 ✅ 优先conda install 然后pip install
 
@@ -50,11 +69,9 @@ conda install -c conda-forge langchain==1.2.12
 pip install langchain==1.2.12
 ```
 
+<font color="orange">安装所有的依赖：</font>
 
-
-安装所有的依赖：
-
-[📎requirements.txt](https://www.yuque.com/attachments/yuque/0/2026/txt/29329670/1788404437850-1bf62148-3101-4121-9ad0-83a6711d2f1e.txt)
+ [requirements.txt](../java/requirements.txt) 
 
 ⚠️ 要切换到对应的环境
 
@@ -65,63 +82,61 @@ pip install -r ./requirements.txt
 
 
 
-# 大模型应用场景
 
-------
+
+# 大模型应用场景
 
 ## RAG（检索生成增强）
 
-------
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788671189.png)
 
 
 
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788671197.png)
 
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788671210.png)
 
-
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788671225.png)
 
 ## Agent开发
 
-------
-
 ✅ 利用LLM的推理决策能力，通过规划、记忆和工具调用的能力，构造一个能独立思考，逐步完成给定目标的Agent（智能体）。
 
-![img](./Langchain/1788404890253-effef19e-f332-46d9-94f0-5256ea8d0fc6.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788404890253-effef19e-f332-46d9-94f0-5256ea8d0fc6.png)
 
 
 
 ## 大模型应用开发的4个场景
 
-------
-
 纯Prompt
 
 ✅ 问一句答一句
 
-![img](./Langchain/1788406741312-d620428f-1a14-4a9b-81f2-fa3c2893c3c8.png)
+![2f8960f4-cddd-4b16-9a7e-808e1bc2f694.png](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788671260.png)
 
 
 
 Agent + Function Calling
 
-![img](./Langchain/1788406804790-7bc1c7ba-5f41-43bc-a7f4-a7f4b9dc5c90.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406804790-7bc1c7ba-5f41-43bc-a7f4-a7f4b9dc5c90.png)
 
 
 
 RAG（检索生成增强）
 
-![img](./Langchain/1788406826108-55d339e0-4c09-400b-878c-14de54a5914b.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406826108-55d339e0-4c09-400b-878c-14de54a5914b.png)
 
 
 
 Fine-tuning（精调\微调）
 
-![img](./Langchain/1788406841933-1659de8b-39b6-49ca-a823-f760007cd452.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406841933-1659de8b-39b6-49ca-a823-f760007cd452.png)
 
 
 
 技术选型路线
 
-![img](./Langchain/1788406875108-196d117a-5c39-4c70-a87f-434bada4ea70.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406875108-196d117a-5c39-4c70-a87f-434bada4ea70.png)
 
 
 
@@ -129,55 +144,35 @@ Fine-tuning（精调\微调）
 
 # 模型初始化
 
-------
-
-
-
 ## 在线模型
 
-------
-
-deepseek
-
-
+**<font color="blue" size="5px">deepseek</font>**
 
 1. 安装依赖（前面已经靠txt文件初始化了）
-   ![img](./Langchain/1788406956177-3d7c8c73-3a89-4644-9f76-a7d68c89a695.png)
+   ![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406956177-3d7c8c73-3a89-4644-9f76-a7d68c89a695.png)
 2. 在pycharm里注意要选择对应的解释器 (在右下角可以选择对应的解释器 一定一定不要选错 选成默认的canda环境！！！)
 3. 常用的参数设置
-   ![img](./Langchain/1788406996330-7fe0d210-1f72-4ddb-b483-4bf689d6f376.png)
-
-
+   ![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788406996330-7fe0d210-1f72-4ddb-b483-4bf689d6f376.png)
 
 ## 本地模型
 
-------
-
 ✅ LangChain也支持使用ollama、vllm等框架启动的本地大模型。
-
-
-
-
-
-
 
 ## 模型调用
 
-------
-
-invoke()
+<font color="blue">invoke()</font>
 
 ✅ invoke方法非常灵活，支持三种形式的输入： 文本输入 、 字典列表 、 消息对象列表 （可以携带多轮对象，携带记忆）。 
 
 ✅ invoke的返回值
 
-![img](./Langchain/1788407058906-b9523893-5b89-428d-83bd-4b60b3b47240.png)
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788670784.png)
 
-![img](./Langchain/1788407081916-c8433e37-3c75-4073-9232-2e34772854c4.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788407081916-c8433e37-3c75-4073-9232-2e34772854c4.png)
 
 
 
-stream()
+<font color="blue">stream()</font>
 
 ✅ 相应速度快
 
@@ -185,25 +180,17 @@ stream()
 
 
 
-batch()
+<font color="blue">batch()</font>
 
 ✅ 一次性接收所有的请求
 
 
 
-同步和异步调用
-
-
+<font color="blue">同步和异步调用</font>
 
 ## 模型初始化完整参数
 
-------
-
-
-
-以deepseek为例：
-
-
+**<font color="red">以deepseek为例：</font>**
 
 入参：
 
@@ -214,17 +201,14 @@ print(ChatDeepSeek.model_fields.keys())
 
 出参：
 
-![img](./Langchain/1788407183995-b6d99d90-d685-4d6d-9f32-091b3135e87d.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788407183995-b6d99d90-d685-4d6d-9f32-091b3135e87d.png)
 
-🚀 比较重要的:model_kwargs , extra_body
-
-
+> 🚀比较重要的:model_kwargs , extra_body
+>
 
 ## 动态参数
 
-------
-
-![img](./Langchain/1788407271093-fd4c1d46-45d6-438b-b94c-b839e69c903e.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788407271093-fd4c1d46-45d6-438b-b94c-b839e69c903e.png)
 
 | 配置项          | 类型                      | 描述                                                         |
 | --------------- | ------------------------- | ------------------------------------------------------------ |
@@ -236,9 +220,9 @@ print(ChatDeepSeek.model_fields.keys())
 | recursion_limit | int                       | 限制运行时递归调用的最大深度。主要在复杂的工作流（如 Agent 执行多步工具调用）中，防止出现无限递归循环。 |
 | configurable    | Dict[str, Any]            | 一个万能字典，用于传递其他可配置参数。实现更高级的动态行为，如配置可替代的模型或组件。 |
 
-# LangSmith
 
-------
+
+# LangSmith
 
 ✅ LangSmith是Langchain生态中专门用于LLM应用调试、监控、评估和管理的平台。
 
@@ -250,8 +234,6 @@ print(ChatDeepSeek.model_fields.keys())
 
 # 消息和提示词模板
 
-------
-
 ✅ **Message（消息）是模型交互的最基本单元**
 
 LangChain 在 1.0 中提供了跨模型统一的 Message 标准。无论你使用的是 OpenAI、Anthropic、Gemini 还是本地模型，这一标准都能保持一致的行为。好处：
@@ -262,17 +244,9 @@ LangChain 在 1.0 中提供了跨模型统一的 Message 标准。无论你使�
 
 
 
-
-
-
-
 ## 认识消息
 
-------
-
 ### 消息的内部结构
-
-------
 
 ✅ LangChain的消息（Message）对象包含三种字段
 
@@ -285,8 +259,6 @@ LangChain 在 1.0 中提供了跨模型统一的 Message 标准。无论你使�
 
 
 ### 消息的类型
-
-------
 
 ✅ LangChain定义了很多消息类型，通过 role 区分。常用的有四种。
 
@@ -301,8 +273,6 @@ LangChain 在 1.0 中提供了跨模型统一的 Message 标准。无论你使�
 
 ### 消息格式
 
-------
-
 1. JSON格式
 2. 对象格式 
 
@@ -314,39 +284,29 @@ LangChain 在 1.0 中提供了跨模型统一的 Message 标准。无论你使�
 
 # 工具调用
 
-------
-
 ## 概述
-
-------
 
 ✅ 在LangChain中，工具（Tools）实际上是指明确定义了输入和输出的 可调用函数 。因此， 工具调用(Tool Calling) 也被称为 函数调用(Function Calling)。
 
 ✅ 整体流程入下
 
-![img](./Langchain/1788420862716-5a4a16e4-7d00-4069-b55e-c80b17662262.png)
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788670785.png)
 
 ✅ 细节流程如下
 
-步骤1：模型绑定工具 ：通过model.bind_tools([...])绑定一个或者多个工具。
+<font color="orange">步骤1</font>：模型绑定工具 ：通过model.bind_tools([...])绑定一个或者多个工具。
 
-步骤2：模型生成工具调用请求 ：用户输入问题，调用模型（比如invoke()）。如果需要调用工具，模型返回包含工具调用信息（如工具名称和参数）的AIMessage。
+<font color="orange">步骤2</font>：模型生成工具调用请求 ：用户输入问题，调用模型（比如invoke()）。如果需要调用工具，模型返回包含工具调用信息（如工具名称和参数）的AIMessage。
 
-步骤3：开发者手动执行工具 ：用户从响应中提取工具调用信息并手动调用对应的工具（比如工具.invoke()）。
+<font color="orange">步骤3</font>：开发者手动执行工具 ：用户从响应中提取工具调用信息并手动调用对应的工具（比如工具.invoke()）。
 
-步骤4：将工具执行结果ToolMessage传递给模型生成最终结果 ：将之前用户提问内容和手动执行工具结果ToolMessage返回模型，模型最终生成回复。
+<font color="orange">步骤4</font>：将工具执行结果ToolMessage传递给模型生成最终结果 ：将之前用户提问内容和手动执行工具结果ToolMessage返回模型，模型最终生成回复。
 
 
 
 ## 工具的定义
 
-------
-
-
-
 ### 不使用@tool（不推荐）
-
-------
 
 ```python
 from langchain_core.utils.function_calling import convert_to_openai_tool
@@ -365,8 +325,6 @@ rprint(convert_to_openai_tool(get_weather))
 
 
 ### 使用@tool（推荐）
-
-------
 
 ```python
 class weatherSchema(BaseModel):
@@ -387,27 +345,15 @@ def get_weather(city: str, if_forecast: bool):
 
 # 结构化输出
 
-------
-
 ## 概述
 
-------
-
-
-
 ### 什么是结构化输出
-
-------
 
 ✅ 要求模型最终返回一个符合预定义结构的数据对象，例如固定字段的JSON、Pydantic 模型、TypedDict，而不再是无格式的自然语言文本。它的核心目标是把“ 自然语言回答”变成“ 程序可以稳定消费的数据”
 
 
 
-
-
 ### 结构化输出
-
-------
 
 ```python
 # 一步到位
@@ -419,8 +365,6 @@ person = structured_llm.invoke("张三是一名 30 岁的软件工程师")
 
 
 ### 结构化输出模式
-
-------
 
 目前LangChain 1.x 支持多种Schema与结构化输出方式：
 
@@ -435,11 +379,7 @@ person = structured_llm.invoke("张三是一名 30 岁的软件工程师")
 
 ## 四种结构化输出
 
-------
-
 ### Pydantic
-
-------
 
 ✅ 它通过在运行时强制执行类型提示，确保数据的正确性和一致性，是 生产场景首选 。
 
@@ -451,7 +391,7 @@ person = structured_llm.invoke("张三是一名 30 岁的软件工程师")
 
 
 
-基本使用
+<font color="orange">基本使用</font>
 
 ```python
 from pydantic import BaseModel, Field, SecretStr
@@ -475,26 +415,19 @@ print(type(response))
 
 
 
-详细过程
+<font color="orange">详细过程</font>
 
-<details class="lake-collapse"><summary id="u63ca038b"><span class="ne-text" style="color: rgba(255,0,255,1)">图解和文字</span></summary><p id="u3fbedd36" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><img src="https://cdn.nlark.com/yuque/0/2026/png/29329670/1788429083159-684689d1-9284-491e-9f20-368524b10b4a.png" width="527" title="" crop="0,0,1,1" id="u32a48c7c" class="ne-image"></p><p id="u447abd34" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgba(255,0,0,1)">第1步：定义结构</span><span class="ne-text" style="color: #262626"><br></span><span class="ne-text" style="color: #262626">比如：</span></p><pre data-language="python" id="PH9BW" class="ne-codeblock language-python" style="border: 1px solid #e8e8e8; border-radius: 2px; background: #f9f9f9; padding: 16px; font-size: 13px; color: #595959"><code>from pydanticimportBaseModel, Field
-
-class BookInfo(BaseModel):
-    title: str = Field(description="书名")
-    author: str = Field(description="作者名字")
-    tags: list[str] = Field(description="书籍的标签或分类")</code></pre><p id="ub450fb77" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"></p><p id="u16ec2b97" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgba(255,0,0,1)">第2步：协议转换</span></p><p id="ub0ba4804" class="ne-p" style="margin: 0; padding: 0; min-height: 24px; text-indent: 2em"><span class="ne-text" style="color: #262626">LangChain 内部会调用 Pydantic 的底层方法（如 </span><span class="ne-text" style="color: #0000ff">model_json_schema() </span><span class="ne-text" style="color: #262626">），将你写的 Python 代码自动转换成标准的 JSON Schema。这个 JSON Schema 是一段严格的 JSON 文本，详细描述了有哪些字段、字段类型是什么（ </span><span class="ne-text" style="color: #0000ff">string </span><span class="ne-text" style="color: #262626">,</span></p><p id="u6e184a97" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #0000ff">array</span><span class="ne-text" style="color: #262626"> 等）以及字段的描述（ </span><span class="ne-text" style="color: #0000ff">description </span><span class="ne-text" style="color: #262626">）。</span></p><p id="ua4fc41de" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626"></span></p><p id="u347213ca" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgba(255,0,0,1)">第3步：模型交互与强约束</span></p><p id="ua45e49ce" class="ne-p" style="margin: 0; padding: 0; min-height: 24px; text-indent: 2em"><span class="ne-text" style="color: #262626">LangChain 会将这个 JSON Schema 包装进给大模型的 API 请求中。现代方法（ </span><span class="ne-text" style="color: #0000ff">.with_structured_output </span><span class="ne-text" style="color: #262626">）： 现代大模型（如 OpenAI、Anthropic、Gemini 等）普遍支持“函数调用/工具调用（Function/Tool Calling）”或“JSON Mode”。LangChain 会把 JSONSchema 作为 Tools 传入。大模型侧的约束： 像 OpenAI 的 </span><span class="ne-text" style="color: #0000ff">strict=True</span><span class="ne-text" style="color: #262626"> 参数，会启动模型的语法采样约束（Grammar-based sampling）。大模型在解码生成 token 时，不是瞎猜，而是严格按照 JSON Schema 的语</span></p><p id="u9213d1fa" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626">法树进行选择，从而在模型底层级保证了输出格式绝不走样。</span></p><p id="ua889d2ef" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626"></span></p><p id="u48d78791" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: rgba(255,0,0,1)">第4步：自动解析与验证</span></p><p id="ue0dde211" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626">当大模型返回符合 JSON 规范的字符串后，LangChain 的 </span><span class="ne-text" style="color: #0000ff">PydanticStructuredOutputParser </span><span class="ne-text" style="color: #262626">（解析器）会接管工作：</span></p><p id="uc3eeca9c" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626">1. 解析（Parsing）： 将字符串解析为 Python 字典。</span></p><p id="ud6fb734c" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626">2. 验证（Validation）： 将字典喂给你的 Pydantic 模型。Pydantic 会自动检查数据类型是否正确。如果模型漏掉了必填字段，或者类型错误，这里会直接抛出验证错误（或者触发 LangChain 的重试机制）。</span></p><p id="u3805a6ea" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"><span class="ne-text" style="color: #262626">3. 返回（Return）： 如果通过验证，你拿到的不再是冷冰冰的字符串，而是一个直接可以点出属性的 Python Pydantic 对象（例如 </span><span class="ne-text" style="color: #0000ff">result.title </span><span class="ne-text" style="color: #262626">）。</span></p><p id="u343da1ad" class="ne-p" style="margin: 0; padding: 0; min-height: 24px"></p></details>
+![image.png](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788673059.png)
 
 
 
 ### TypedDict
 
-------
-
 ✅ TypedDict 是 Python 3.8+ 引入的一种类型提示工具，即带有类型声明的字典结构。适合需要快速定义字典结构且无需 Pydantic 重量级功能的场景。
 
 
 
-基本使用
+<font color="orange">基本使用</font>
 
 ```python
 from typing import TypedDict, List, Annotated
@@ -526,19 +459,15 @@ print(f"演员列表:{resp['cast']}")
 print(f"评分: {resp['rating']}")
 ```
 
-
-
 ### JSON Schema
-
-------
 
 ✅ 这种方式需要按照JSON Schema规范拼接JSON字符串，比较繁琐，并且缺少校验机制。不推荐。
 
 
 
-基本使用
+<font color="orange">基本使用</font>
 
-![img](./Langchain/1788430072731-8868a361-2cc8-4aa0-aa68-bfdb0e0ed258.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788430072731-8868a361-2cc8-4aa0-aa68-bfdb0e0ed258.png)
 
 
 
@@ -554,9 +483,7 @@ print(f"评分: {resp['rating']}")
 
 
 
-
-
-基本使用
+<font color="orange">基本使用</font>
 
 ```python
 from pydantic import Field
@@ -579,27 +506,19 @@ print(type(response))
 
 
 
-
-
 ### 重点小结
-
-------
 
 ✅ 用Pydantic定义schema，在接收到响应后会进行校验，字段不匹配则抛出异常，其余三种方式不校验。
 
 这里只展示Pydantic如下：
 
-![img](./Langchain/1788430734172-0192e8ad-d0a5-43cc-bc45-6b2906634741.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788430734172-0192e8ad-d0a5-43cc-bc45-6b2906634741.png)
 
 
 
 ## 获取结构化结果方式
 
-------
-
 ### 使用with_structured_output
-
-------
 
 代码如下
 
@@ -619,31 +538,23 @@ model_with_structure = model.with_structured_output(Movie,include_raw=True)
 
 ### 使用输出解析器(不推荐)
 
-------
-
 ✅ 这种方法更传统，依赖于在提示词中明确指示模型输出特定格式的文本，然后使用解析器进行转换。其流程是： 提示词指导 (引导生成指定类型）→模型生成文本→解析器转换 。
 
-![img](./Langchain/1788431013837-11a5c82b-7c97-4c2c-b04c-ae57bad5c07c.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788431013837-11a5c82b-7c97-4c2c-b04c-ae57bad5c07c.png)
 
 
 
 # 智能体
 
-------
-
 ## 理解 Agents
 
-------
-
 ### 概述
-
-------
 
 ✅ 在大模型应用开发中，智能体通常指一种以 大语言模型为推理与决策核心 ，结合 记忆 、 工具调用 与环境交互能力，能够进行 规划决策 并执行 复杂任务 以达成目标的软件系统。
 
 ✅ 核心组件：
 
-![img](./Langchain/1788431768246-33f65677-f4fb-4aea-9c8a-cf124055fe5d.png)
+![img](https://cdn.nlark.com/yuque/0/2026/png/29329670/1788431768246-33f65677-f4fb-4aea-9c8a-cf124055fe5d.png)
 
 实际开发中几个要素并不需要同时出现，一句话总结
 
@@ -656,9 +567,7 @@ model_with_structure = model.with_structured_output(Movie,include_raw=True)
 
 ### agent 的创建与调用
 
-------
-
-历史上的调用：
+**<font color="red">历史上的调用：</font>**
 
 在 LangChain 0.x 时代，框架内的 Agent 系统经历了“碎片化”阶段。当时的设计理念是 “针对场景设计特定 Agent”：
 
@@ -693,7 +602,7 @@ result = executor.invoke({"input": "问题"})
 
 
 
-全新的调用：
+**<font color="red">全新的调用：</font>**
 
 ✅ 统一为一个入口：create_agent()
 
@@ -706,21 +615,13 @@ agent = create_agent(
 )
 ```
 
-
-
 ### 模型的传入方式
-
-------
 
 ✅ 分为字符串和对象 比较简单 可以看代码
 
 
 
-
-
 ### 绑定工具
-
-------
 
 ✅ 支持静态和动态绑定，后者需要中间件
 
@@ -728,4 +629,4 @@ agent = create_agent(
 
 Langchain 内置的工具如下
 
-![img](./Langchain/1788450662981-8819e846-2c96-4d9d-953b-58acc6915e1f.png)
+![img](https://raw.githubusercontent.com/Mr-chenyu-NJ/note/main/PIC/2026/09/upgit_20260906_1788670786.png)
